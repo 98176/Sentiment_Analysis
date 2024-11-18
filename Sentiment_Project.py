@@ -1,4 +1,5 @@
 import streamlit as st
+from textblob import TextBlob
 st.sidebar.title("About Us")
 st.sidebar.text("""We are students at ducat &
 learning machine learning.
@@ -15,8 +16,6 @@ Chintu @ 3333
 st.title("Sentiment Analysis")
 text=st.text_input("**Enter text**")
 btn=st.button("Predict")
-
-from textblob import TextBlob
 
 if btn:
     blob=TextBlob(text)
